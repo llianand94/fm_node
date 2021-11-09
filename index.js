@@ -12,8 +12,8 @@ console.log(compon.render());
 const fs = require('fs/promises');
 
  fs.readFile('./text.txt','utf-8').then((content)=>{
-   const newText = '\n lorem';
-   fs.writeFile('./newText.txt', content+newText);
+   const newText = content+ '\n lorem';
+   fs.writeFile('./newText.txt', newText);
   });
 
  
